@@ -14,7 +14,7 @@ $(NAME):
 		make -C gnl
 		make -C printf
 		ar -rc $(NAME) libft/*.o printf/*.o printf/*.o
-		@echo "$(green)The minilib is created!$(reset)"
+		@echo "$(green)The minilibft is created!$(reset)"
 
 # Rule to clean object files
 clean:
@@ -29,7 +29,7 @@ fclean:
 		@make fclean -C gnl
 		@make fclean -C printf
 		@rm -f $(NAME)
-		@echo "$(green)The minilib is cleared.$(reset)"
+		@echo "$(green)The minilibft is cleared.$(reset)"
 		
 # Rule to re-make everything
 re: fclean all
