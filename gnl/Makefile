@@ -13,7 +13,7 @@ $(NAME):
 		ar -rc $(OUTN) $(OFILES)
 all:	$(NAME)
 clean:
-		rm -f (OFILES)
+		rm -f $(OFILES)
 fclean: clean
 		rm -f $(NAME)
 re: fclean all
