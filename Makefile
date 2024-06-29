@@ -13,7 +13,7 @@ $(NAME):
 		make -C libft
 		make -C gnl
 		make -C printf
-		ar -rc $(NAME) libft/*.o printf/*.o printf/*.o
+		ar -rc $(NAME) libft/*.o printf/*.o gnl/*.o
 		@echo "$(green)The minilibft is created!$(reset)"
 
 # Rule to clean object files
