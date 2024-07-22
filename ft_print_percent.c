@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_char.c                                    :+:      :+:    :+:   */
+/*   ft_print_percent.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wkabat <wkabat@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/03 10:56:28 by wkabat            #+#    #+#             */
-/*   Updated: 2024/04/09 13:34:19 by wkabat           ###   ########.fr       */
+/*   Created: 2024/04/03 11:33:25 by wkabat            #+#    #+#             */
+/*   Updated: 2024/07/22 13:48:12 by wkabat           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
-int	ft_print_char(int c)
+int	ft_print_percent(void)
 {
-	return (write(1, &c, 1));
+	return (write(1, "%", 1));
 }

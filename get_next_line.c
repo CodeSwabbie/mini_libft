@@ -6,11 +6,11 @@
 /*   By: wkabat <wkabat@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/26 11:32:22 by wkabat            #+#    #+#             */
-/*   Updated: 2024/06/03 12:23:45 by wkabat           ###   ########.fr       */
+/*   Updated: 2024/07/22 13:46:21 by wkabat           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "libft.h"
 
 static char	*cleaner(char *line);
 static char	*fill_line(int fd, char *bookmark, char *book);

@@ -6,14 +6,20 @@
 /*   By: wkabat <wkabat@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/15 09:37:56 by wkabat            #+#    #+#             */
-/*   Updated: 2024/03/15 11:09:00 by wkabat           ###   ########.fr       */
+/*   Updated: 2024/07/22 13:45:07 by wkabat           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 42
+# endif
 # include <unistd.h>
 # include <stdlib.h>
+# include <stdio.h>
+# include <fcntl.h>
+# include <stdarg.h>
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int i);
@@ -49,5 +55,18 @@ void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
+char	*get_next_line(int fd);
+char	*ft_substr(char const *s, unsigned int start, size_t len);
+char	*ft_strjoin(char const *s1, char const *s2);
+char	*ft_strchr(const char *s, int c);
+size_t	ft_strlen(const char *s);
+int		ft_print_char(int c);
+int		ft_print_str(char *str);
+int		ft_print_percent(void);
+int		ft_print_nbr(int n);
+int		ft_print_hex(unsigned int n, const char format);
+int		ft_print_unsigned(unsigned int n);
+int		ft_print_ptr(void *str);
+int		ft_printf(const char *str, ...);
 
 #endif

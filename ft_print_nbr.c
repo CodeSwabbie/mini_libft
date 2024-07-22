@@ -6,11 +6,11 @@
 /*   By: wkabat <wkabat@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/03 11:46:45 by wkabat            #+#    #+#             */
-/*   Updated: 2024/04/12 11:58:24 by wkabat           ###   ########.fr       */
+/*   Updated: 2024/07/22 13:48:05 by wkabat           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
 int	ft_print_nbr(int n)
 {

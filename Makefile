@@ -1,38 +1,67 @@
-#	Variables
-Library	=	minilib
-OUTN		= $(Library).a
-NAME		=	$(OUTN)
-green=\033[0;32m
-reset=\033[0m
+Library		= libft
+SRC	= 	ft_isalpha \
+		ft_isdigit \
+		ft_isascii \
+		ft_isalnum \
+		ft_isprint \
+		ft_strlen \
+		ft_toupper \
+		ft_tolower \
+		ft_memcpy \
+		ft_strnstr \
+		ft_memset \
+		ft_memmove \
+		ft_bzero \
+		ft_strlcpy \
+		ft_strchr \
+		ft_strrchr \
+		ft_strncmp \
+		ft_strlcat \
+		ft_memchr \
+		ft_memcmp \
+		ft_atoi \
+		ft_calloc \
+		ft_strdup \
+		ft_substr \
+		ft_strjoin \
+		ft_strtrim \
+		ft_split \
+		ft_itoa \
+		ft_strmapi \
+		ft_striteri \
+		ft_putchar_fd \
+		ft_putstr_fd \
+		ft_putendl_fd \
+		ft_putnbr_fd \
+		get_next_line \
+		ft_print_char \
+		ft_print_str \
+		ft_print_percent \
+		ft_print_nbr \
+		ft_print_hex \
+		ft_print_unsigned \
+		ft_print_ptr \
+		ft_printf \
 
-# Default rule
+Compiler	= cc
+Flags	= -Wall -Wextra -Werror
+OUTN	= $(Library).a
+CFILES	= $(SRC:%=%.c)
+OFILES	= $(SRC:%=%.o)
+NAME	= $(OUTN)
+
+$(NAME):
+		$(Compiler) $(Flags) -c $(CFILES) -I./
+		ar -rc $(OUTN) $(OFILES)
+
 all: $(NAME)
 
-# Rule to create library
-$(NAME):
-		make -C libft
-		make -C gnl
-		make -C printf
-		ar -rc $(NAME) libft/*.o printf/*.o gnl/*.o
-		@echo "$(green)The minilibft is created!$(reset)"
+clean: 
+		rm -f $(OFILES)
 
-# Rule to clean object files
-clean:
-		@make clean -C libft
-		@make clean -C gnl
-		@make clean -C printf
-		@echo "$(green)Object files cleared!$(reset)"
+fclean: clean
+		rm -f $(NAME)
 
-# Rule to clean everything
-fclean:
-		@make fclean -C libft
-		@make fclean -C gnl
-		@make fclean -C printf
-		@rm -f $(NAME)
-		@echo "$(green)The minilibft is cleared.$(reset)"
-		
-# Rule to re-make everything
 re: fclean all
 
-# Phony targets
 .PHONY: all, clean, fclean, re
